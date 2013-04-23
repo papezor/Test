@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elezioni 2013</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/jquery.plot.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/functionDettaglio.js"></script>
+    <script type="text/javascript" src="js/plot/jquery.jqplot.min.js"></script>
+
+    <script type="text/javascript" src="js/plot/jqplot.pieRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.donutRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.dateAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.enhancedLegendRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.categoryAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.canvasTextRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.barRenderer.min.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAd32zIjHsuJhkooZr5z9z5pCCapQnjQNc&sensor=false">
+    </script>
+
+
+
+	<!--<script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAd32zIjHsuJhkooZr5z9z5pCCapQnjQNc&sensor=false">
+    </script>-->
+    <script type="text/javascript" src="js/defaultVar.js"></script> 
+	<script type="text/javascript" src="js/initDettaglio.js"></script>
+<style>	[data-role=content]{overflow:hidden;top:0px;height:auto !important;}
+td.jqplot-table-legend
+{
+width:10px;
+color:white;
+}
+.jqplot-table-legend-swatch
+{
+width:9px;
+height:7px;
+margin-left:20px;
+}
+
+</style>
+</head>
+	<body >
+		<div data-role="page" class="ui-responsive-panel" data-theme="c" >
+
+			<div data-role="header" data-theme="a" data-position="fixed"  >
+				<h1 id="titlePage">Elezioni 2013</h1>
+				<!--<h2 style="color:red;" id="dettSezioni"></h2>-->
+				<a href="javaScript:closeAllPanel('nav-panel');" data-icon="bars" data-iconpos="notext">Menu</a>
+				<a href="javaScript:refreshPage();" data-icon="refresh" data-iconpos="notext">R</a>
+				<!--<a href="javaScript:closeAllPanel('graphPerc');" data-icon="plus" data-iconpos="notext">Add</a>-->
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<div class="renderTable" id="renderTable" >
+
+					 <div class="ui-grid-solo" data-theme="c">
+						<div class="ui-block-a">
+	                       <div id="pannelloRiepilogo" class="contentFiltro" data-role="fieldcontain"  data-placeholder="true" style="display:none;"></div>
+						</div>
+					</div>
+					<div class="ui-grid-b" data-theme="c" >
+
+						<div class="ui-block-a" id="blockFiltri"> <!--- filtri -->
+
+							<div id="pannelloFiltri" class="contentFiltro" data-role="fieldcontain"  data-placeholder="true" >
+								<div id="tableMun" class="tableMun" data-role="" >
+		
+    							</div>
+						    </div><!--- /filtri  -->
+					    </div>
+						<div id="risultati" class="ui-block-b"> <!--- risultati -->
+							<div id="pannelloSezioni" class="contentFiltro" data-role="fieldcontain"  data-placeholder="true">
+                            <div id="tableSez" class="tableMun" data-role="" >
+		
+    							</div>
+					     </div>
+						</div> <!--- /risultatix -->
+						<div class="ui-block-c"> <!---  dettaglio sezione -->
+							<div id="tableSezDett"></div>
+
+						</div> <!--- /dettaglio sezione -->
+					</div><!-- /grid-b -->
+				</div>
+			</div> <!-- /content -->
+			<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+
+				<div class="menu" style="background:#ff9900;" data-role="collapsible-set" data-inset="false">
+
+
+					<!-- panel content goes here -->
+			</div><!-- /panel -->
+
+			<div data-role="panel" data-position="right" data-position-fixed="false" data-display="reveal" id="graphPerc" data-theme="b">
+				<div id="chartGraphPerc" style="width:200px;height:500px;"></div>
+
+			</div><!-- /panel -->
+
+
+		<div data-role="popup" id="dettSezione" data-overlay-theme="c" data-position-to="window">
+				<div class="ui-corner-all ui-body-e" style="padding:5px 15px; line-height:1.1em" id="listaSezioniCoord">
+					<h3>Sezione Numero <span id="dettSezioneNumero"></span></h3>
+
+					<p>Pervenuta <span id="dettSezionePerv"></span><br>
+					Municipio <span id="dettSezioneMunicipio"></span><br>
+					Incaricato <span id="dettSezioneIncaricato"></span><br>
+					Scuola <span id="dettSezioneScuola"></span><br>
+					Indirizzo <span id="dettSezioneUbicazione"></span><br>
+					Gruppo <span id="dettSezioneGruppo"></span><br>
+					Telefono <span id="dettSezioneTelefono"></span><br>
+					Cellulare <span id="dettSezioneCellulare"></span><br>
+					Voip <span id="dettSezioneVoip"></span><br>
+					</p>
+
+				</div>
+		</div>
+
+		</div><!-- /page -->
+
+
+
+	</body>
+</html>

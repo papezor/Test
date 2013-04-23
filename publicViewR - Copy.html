@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Elezioni 2013</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/functionPublic.js"></script>
+	 <script type="text/javascript" src="js/defaultVar.js"></script> 
+    <script type="text/javascript" src="js/initPublic.js"></script>
+	<style>[data-role=content]{top:1px;width:100%; height:100% !important; overflow:hidden;}
+	</style>
+</head>
+	<body >
+		<div data-role="page" class="ui-responsive-panel" data-theme="c" >
+
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Elezioni 2013</h1>
+				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+			    <a href="javaScript:refreshPage();" data-icon="refresh" data-iconpos="notext">Menu</a>
+			</div><!-- /header -->
+			
+			
+			
+		<!--	<div  data-role="footer" data-theme="a" data-content-theme="c"  style="text-align:center; height:26x;padding:2px 2px 2px 2px;" data-position="fixed" >
+						<span style="color:white; font-size:1.2em">
+							ROMA CAPITALE</span>
+							
+			</div> <!-- /footer -->
+			
+			
+			<div data-role="content" style="text-align:center;" >
+				<!--<div id="scroller" style="height: 98%; width: 99%; overflow: auto;">-->
+			
+	
+           		  <iframe src="http://www.elezioni.comune.roma.it/elezioni/2013/Politiche/P022013Mobile/index.htm" id="framePublicSite" scrolling="auto"
+						  style="height: 200px !important;position:absolute; left:0px; top:0px !important;overflow:visible;width:400px;"></iframe>
+			   <!--</div>-->
+			</div> <!-- /content -->
+
+			<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+
+			  <div class="menu" style="background:#ff9900;" data-role="collapsible-set" data-inset="false">
+
+					<div class="menuItem" data-role="collapsible"data-role="collapsible" data-theme="a" data-content-theme="c"
+						data-collapsed-icon="arrow-d" data-expanded-icon="minus" data-inset="false">
+						<h3>
+							Affluenze</h3>
+						<ul data-role="listview">
+							<li><a class="menuItem sel" href="javascript:loadPage('index.html','Aff',0);">Mappa</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('affluenze.html','Aff',0);">Cruscotto</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('dettaglio.html','Aff',0);">Dettaglio</a></li>
+						</ul>
+					</div>
+					<div class="menuItem" data-role="collapsible" data-role="collapsible" data-theme="a" data-content-theme="c"
+						data-collapsed-icon="arrow-d" data-expanded-icon="minus" data-inset="false">
+						<h3>Corpo Elettorale</h3>
+						<ul data-role="listview">
+							<li><a class="menuItem sel" href="javascript:loadPage('corpo.html','Aff',0)">Corpo Elettorale</a></li>
+						</ul>
+					</div>
+					<div class="menuItem" data-role="collapsible"data-role="collapsible" data-theme="a" data-content-theme="c"
+						data-collapsed-icon="arrow-d" data-expanded-icon="minus" data-inset="false">
+						<h3>
+							Politiche</h3>
+						<ul data-role="listview">
+							<li><a class="menuItem sel" href="javascript:loadPage('index.html','Scr',1);">Mappa Senato</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('index.html','Scr',0);">Mappa Camera</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('dettaglio.html','Scr',1);">Dettaglio Senato</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('dettaglio.html','Scr',0);">Dettaglio Camera</a></li>
+							
+						</ul>
+					</div>
+					<div class="menuItem" data-role="collapsible"data-role="collapsible" data-theme="a" data-content-theme="c"
+						data-collapsed-icon="arrow-d" data-expanded-icon="minus" data-inset="false">
+						<h3>
+							Regionali</h3>
+						<ul data-role="listview">
+							<li><a class="menuItem sel" href="javascript:loadPage('index.html','Scr',2);">Mappa Liste</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('index.html','Scr',3);">Mappa Preferenze</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('dettaglio.html','Scr',2);">Dettaglio Liste</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('dettaglio.html','Scr',3);">Dettaglio Preferenze</a></li>
+							
+						</ul>
+					</div>
+				
+					<div class="menuItem" data-role="collapsible" data-role="collapsible" data-theme="a" data-content-theme="c"
+						data-collapsed-icon="arrow-d" data-expanded-icon="minus" data-inset="false">
+						<h3>Sito Istituzionale</h3>
+						<ul data-role="listview">
+							<li><a class="menuItem sel" href="javascript:loadPage('publicView.html','Aff',0);">Politiche</a></li>
+							<li><a class="menuItem sel" href="javascript:loadPage('publicViewR.html','Aff',0);">Regionali</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+					<!-- panel content goes here -->
+			</div><!-- /panel -->
+	
+
+		</div><!-- /page -->
+		
+		
+
+
+	</body>
+</html>

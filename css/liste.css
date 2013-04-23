@@ -1,0 +1,32 @@
+﻿#pnlLeft 
+{
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    opacity:0.7;
+}
+
+.ui-li, .ui-li.ui-field-contain {
+ height:45px;
+}
+
+.ui-li-thumb, .ui-listview .ui-li-icon {
+     margin-top:5px;
+     margin-left:40px;
+      
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-controls {
+   float:right;
+}
+
+.ui-controlgroup-controls{
+  margin-top:-10px;
+}
+
+#listaCandidati{
+	line-height:1.2em;
+	font-size:1em;
+	padding: 2px 2px 2px 2px;
+
+
+}

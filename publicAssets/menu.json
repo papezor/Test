@@ -1,0 +1,19 @@
+[{
+	"titolo": "Affluenze Mappa",
+	"click": "javascript: loadPage('index.html','Aff',0)"
+},{
+	"titolo": "Affluenze Cruscotto",
+	"click": "javascript: loadPage('affluenze.html','Aff',0)"
+},{
+	"titolo": "Affluenze Dettaglio",
+	"click": "javascript:loadPage('dettaglio.html','Aff',0)"
+},{
+	"titolo": "Affluenze Municipi",
+	"click": "javascript:loadPage('affmun.html','Aff',0)"
+},{
+	"titolo": "Scrutinio Mappa",
+	"click": "javascript: loadPage('index.html','Aff',0)"
+},{
+	"titolo": "Corpo Elettorale",
+	"click": "javascript:loadPage('corpo.html','Aff',0)"
+}]

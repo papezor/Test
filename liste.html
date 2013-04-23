@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Elezioni 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+
+    <script type="text/javascript" src="publicAssets/Candidati.js"></script>
+
+    <script type="text/javascript" src="publicAssets/Senato.js"></script>
+    <script type="text/javascript" src="js/defaultVar.js"></script> 
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAd32zIjHsuJhkooZr5z9z5pCCapQnjQNc&sensor=false">
+    </script>
+	<script type="text/javascript" src="js/elezioni.js"></script>
+    <script type="text/javascript" src="js/functionList.js"></script>
+
+    </script>
+    <!--<script type="text/javascript" src="js/initDettaglio.js"></script>-->
+    <style>
+        [
+        data-role=content]
+        {
+            overflow: hidden;
+            top: 0px;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" class="ui-responsive-panel" data-theme="c">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>
+                Elezioni 2013</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<a href="javaScript:refreshPage();" data-icon="refresh" data-iconpos="notext">Menu</a>
+            <!--<a href="javaScript:closeAllPanel('graphPerc');" data-icon="plus" data-iconpos="notext">Add</a>-->
+        </div>
+        <div data-role="content">
+            <div class="renderTable" id="renderTable">
+                <div class="ui-grid-solo" data-theme="c">
+                    <div class="ui-block-a">
+                        <!--<div id="titolo" style="padding:5px 15px;margin-top:15px; margin-left:20px; text-align:center; width:80%;line-height:1.1em;text-shadow:none;color:white;font-weight:bold;"></div>-->
+                    </div>
+                </div>
+                <div class="ui-grid-a" data-theme="c">
+                    <div class="ui-block-a" id="blockFiltri">
+                        <!--- filtri -->
+                        <div id="pannelloFiltri" class="contentFiltro" data-role="fieldcontain" data-placeholder="true">
+                            <div id="tableMun" class="tableMun" data-role="">
+                            </div>
+                        </div>
+                        <!--- /filtri  -->
+                    </div>
+                    <div id="risultati" class="ui-block-b">
+                        <!--- risultati -->
+                        <div id="pannelloCandidati" class="contentFiltro" data-role="fieldcontain" data-placeholder="true"
+                            style="display: none; padding-left: 20px">
+                            <div id="tableCand" class="tableMun" data-role="">
+                            </div>
+                        </div>
+                    </div>
+                    <!--- /risultatix -->
+                </div>
+                <!--- /dettaglio sezione -->
+            </div>
+            <!-- /grid-b -->
+        </div>
+
+        <div data-role="footer" data-theme="a" data-content-theme="c" style="text-align: center;"
+            data-position="fixed">
+            <fieldset data-role="controlgroup" style="margin: -1px;" data-type="horizontal" data-theme="a">
+                <a href="javaScript:caricaPartiti(1);" data-role="button" id="y">Liste Comunali </a>
+				<a href="javaScript:caricaPartiti(2);" data-role="button" id="n">Liste Municipali </a>
+            </fieldset>
+        </div>
+		
+		<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+					<!-- panel content goes here -->
+		</div><!-- /panel -->
+
+    </div>	
+		
+
+    </div>
+</body>
+</html>

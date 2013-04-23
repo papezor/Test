@@ -1,0 +1,164 @@
+var NUOVI=[
+{
+"POPOLAZIONE":{
+"MUNICIPI": {
+"MUNICIPIO":{
+"ID":{"NUMERO":"01"},
+"NUOVI":{"MASCHI":"    560",
+"FEMMINE":"    518",
+"TOTALI":"   1078",
+"PERCM":" 51.95",
+"PERCF":" 48.05"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"02"},
+"NUOVI":{"MASCHI":"    828",
+"FEMMINE":"    807",
+"TOTALI":"   1635",
+"PERCM":" 50.64",
+"PERCF":" 49.36"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"03"},
+"NUOVI":{"MASCHI":"    319",
+"FEMMINE":"    332",
+"TOTALI":"    651",
+"PERCM":" 49.00",
+"PERCF":" 51.00"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"04"},
+"NUOVI":{"MASCHI":"   1321",
+"FEMMINE":"   1280",
+"TOTALI":"   2601",
+"PERCM":" 50.79",
+"PERCF":" 49.21"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"05"},
+"NUOVI":{"MASCHI":"   1280",
+"FEMMINE":"   1168",
+"TOTALI":"   2448",
+"PERCM":" 52.29",
+"PERCF":" 47.71"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"06"},
+"NUOVI":{"MASCHI":"    754",
+"FEMMINE":"    629",
+"TOTALI":"   1383",
+"PERCM":" 54.52",
+"PERCF":" 45.48"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"07"},
+"NUOVI":{"MASCHI":"    893",
+"FEMMINE":"    831",
+"TOTALI":"   1724",
+"PERCM":" 51.80",
+"PERCF":" 48.20"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"08"},
+"NUOVI":{"MASCHI":"   1755",
+"FEMMINE":"   1734",
+"TOTALI":"   3489",
+"PERCM":" 50.30",
+"PERCF":" 49.70"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"09"},
+"NUOVI":{"MASCHI":"    771",
+"FEMMINE":"    709",
+"TOTALI":"   1480",
+"PERCM":" 52.09",
+"PERCF":" 47.91"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"10"},
+"NUOVI":{"MASCHI":"   1289",
+"FEMMINE":"   1208",
+"TOTALI":"   2497",
+"PERCM":" 51.62",
+"PERCF":" 48.38"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"11"},
+"NUOVI":{"MASCHI":"    876",
+"FEMMINE":"    809",
+"TOTALI":"   1685",
+"PERCM":" 51.99",
+"PERCF":" 48.01"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"12"},
+"NUOVI":{"MASCHI":"   1426",
+"FEMMINE":"   1329",
+"TOTALI":"   2755",
+"PERCM":" 51.76",
+"PERCF":" 48.24"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"13"},
+"NUOVI":{"MASCHI":"   1692",
+"FEMMINE":"   1572",
+"TOTALI":"   3264",
+"PERCM":" 51.84",
+"PERCF":" 48.16"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"15"},
+"NUOVI":{"MASCHI":"    952",
+"FEMMINE":"    894",
+"TOTALI":"   1846",
+"PERCM":" 51.57",
+"PERCF":" 48.43"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"16"},
+"NUOVI":{"MASCHI":"    919",
+"FEMMINE":"    876",
+"TOTALI":"   1795",
+"PERCM":" 51.20",
+"PERCF":" 48.80"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"17"},
+"NUOVI":{"MASCHI":"    430",
+"FEMMINE":"    412",
+"TOTALI":"    842",
+"PERCM":" 51.07",
+"PERCF":" 48.93"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"18"},
+"NUOVI":{"MASCHI":"    927",
+"FEMMINE":"    828",
+"TOTALI":"   1755",
+"PERCM":" 52.82",
+"PERCF":" 47.18"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"19"},
+"NUOVI":{"MASCHI":"   1310",
+"FEMMINE":"   1303",
+"TOTALI":"   2613",
+"PERCM":" 50.13",
+"PERCF":" 49.87"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"20"},
+"NUOVI":{"MASCHI":"   1101",
+"FEMMINE":"   1069",
+"TOTALI":"   2170",
+"PERCM":" 50.74",
+"PERCF":" 49.26"}}
+,
+"MUNICIPIO":{
+"ID":{"NUMERO":"RM"},
+"NUOVI":{"MASCHI":"  19403",
+"FEMMINE":"  18308",
+"TOTALI":"  37711",
+"PERCM":" 51.45",
+"PERCF":" 48.55"}}
+}}}]

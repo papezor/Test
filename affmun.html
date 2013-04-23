@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elezioni 2013</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/jquery.plot.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+   
+    <script type="text/javascript" src="js/affMun.js"></script>
+    <script type="text/javascript" src="js/plot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.pieRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.donutRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.dateAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.categoryAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.canvasTextRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.barRenderer.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.xml2json.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.maphilight.js"></script>
+    <script language="javascript" type="text/javascript" src="js/defaultVar.js"></script>
+	
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAd32zIjHsuJhkooZr5z9z5pCCapQnjQNc&sensor=false">
+    </script>
+	  
+	<script type="text/javascript" src="js/initAffMun.js"></script>
+	
+<style>	[data-role=content]{overflow:hidden;top:0px;height:auto !important;}
+.ui-grid-a > .ui-block-a { width: 70%; padding-left:15px; }
+.ui-grid-a > .ui-block-b { width: 30%; padding-right:15px;}
+td.jqplot-table-legend
+{
+width:10px;
+color:white;
+min-width:10px;
+}
+.jqplot-table-legend-swatch
+{
+width:9px;
+height:7px;
+min-width:10px;
+
+}
+</style>
+</head>
+<body>
+    <div data-role="page" class="ui-responsive-panel" data-theme="c">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1 id="titlePage">Elezioni 2013</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<a href="javaScript:refreshPage();" data-icon="refresh" data-iconpos="notext">Menu</a>
+        </div>
+        <div data-role="content">
+           
+         <!-- my content-->
+
+         	<div class="ui-grid-a" data-theme="c" >
+		 		<div class="ui-block-a" style="width:100%">
+
+				
+
+					<div id="G2" class="contentFiltro" style="height:300px;">
+					 Graph 2
+					</div>
+					<div id="G3" class="contentFiltro" style="height:300px;overflow:hidden;">
+						<div style="width:80%;float:left;">
+							<div id="graphDonut" style="width:50%;float:left;">
+							</div>
+							<div id="barChart" style="width:50%;float:right;">
+							</div>
+						</div>
+					</div>
+
+					<fieldset data-role="controlgroup" class="ui-scrolllistview"  data-type="horizontal">
+
+					</fieldset>
+
+
+
+				</div>
+
+
+
+				<div  class="ui-block-b" style="width:46%">
+
+		
+		 						
+				</div>
+			</div>
+         <!-- end my content-->
+
+        </div>
+      
+        <div data-role="footer" data-theme="a" data-content-theme="c" data-position="fixed">
+
+        </div>
+        <!-- /footer -->
+		<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+
+				
+
+					<!-- panel content goes here -->
+		</div><!-- /panel -->
+
+
+			
+    </div>
+    <!-- /page -->
+
+  
+
+</body>
+</html>

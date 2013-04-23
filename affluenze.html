@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elezioni 2013</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/jquery.plot.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/affluenze.js"></script>
+    <script type="text/javascript" src="js/plot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.pieRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.donutRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.dateAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.enhancedLegendRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.categoryAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.canvasTextRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <script type="text/javascript" src="js/plot/jqplot.barRenderer.min.js"></script> 
+    <script type="text/javascript" src="js/defaultVar.js"></script> 
+	<script type="text/javascript" src="js/initAffluenze.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAd32zIjHsuJhkooZr5z9z5pCCapQnjQNc&sensor=false">
+    </script>
+
+<style>	[data-role=content]{overflow:hidden;top:0px;height:auto !important;}
+td.jqplot-table-legend
+{
+width:10px;
+color:white;
+}
+.jqplot-table-legend-swatch
+{
+width:9px;
+height:7px;
+margin-left:45px;
+}
+</style>
+</head>
+<body>
+    <div data-role="page" class="ui-responsive-panel" data-theme="c">
+
+        <div data-role="header" data-theme="a" data-position="fixed">
+			<h1 id="titlePage">Elezioni 2013</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<a href="javaScript:refreshPage();" data-icon="refresh" data-iconpos="notext">R</a>
+                
+        </div>
+        <div data-role="content">
+         <!-- my content-->
+						<div class="contentFiltro" style="height:30px;font-size:20px;color:white;">
+	              <span style="padding-left:10px;" id="oraAff"></span><span style="padding-left:80px;">Sezioni pervenute <span id="sezPerv"></span> su <span id="setTot"></span></span>
+	         	</div>
+         	<div class="ui-grid-b" data-theme="c">
+		 						<div class="ui-block-a" class="contentFiltro">
+		 						       <div id="contentTitolo" class="contentFiltro" style="height:20px;">
+		 						          <div id="buttonOpenreg"  style="width:20%;float:left;display:none;margin-top:-21px;">
+		 						              <a data-role="button" data-inline="true" data-theme="c" onclick="confronta('reg');">Confronta</a>
+		 						          </div>
+		 						          <div id="buttonClosereg" style="width:20%;float:left;display:none;margin-top:-21px;">
+		 						              <a data-role="button" data-inline="true" data-theme="c" onclick="chiudi('reg');">Chiudi</a>
+		 						          </div>
+		 						          <div id="titoloReg" style="text-align:center;color:yellow;size:12px;font-weight:bold;width:80%;float:left;">
+		 						              Regionali
+		 						          </div>
+		 						      </div>
+										  <div id="R1" class="contentFiltro" style="height:190px">
+
+										  </div>
+										  <div id="R2" class="contentFiltro" style="height:190px;">
+
+										  </div>
+		 						</div>
+		 						<div  class="ui-block-b">
+		 						      <div id="contentTitolo" class="contentFiltro" style="height:20px;">
+		 						          <div id="buttonOpencam"  style="width:20%;float:left;display:none;margin-top:-21px;">
+		 						              <a data-role="button" data-inline="true" data-theme="c" onclick="confronta('cam');">Confronta</a>
+		 						          </div>
+		 						          <div id="buttonClosecam" style="width:20%;float:left;display:none;margin-top:-21px;">
+		 						              <a data-role="button" data-inline="true" data-theme="c" onclick="chiudi('cam');">Chiudi</a>
+		 						          </div>
+		 						          <div id="titoloCam" style="text-align:center;color:lightgreen;;size:12px;font-weight:bold;width:80%;float:left;">
+		 						              Camera
+		 						          </div>
+		 						      </div>
+		 								  <div id="C1" class="contentFiltro" style="height:190px">
+
+										  </div>
+										  <div id="C2" class="contentFiltro" style="height:190px;">
+
+										  </div>
+								</div>
+								<div  class="ui-block-b">
+								      <div id="contentTitolo" class="contentFiltro" style="height:20px;">
+		 						          <div id="buttonOpensen" style="width:20%;float:left;display:none;margin-top:-21px;">
+		 						              <a data-role="button" data-inline="true" data-theme="c" onclick="confronta('sen');">Confronta</a>
+		 						             
+		 						          </div>
+		 						          <div id="buttonClosesen" style="width:20%;float:left;display:none;margin-top:-21px;">
+		 						              <a data-role="button" data-inline="true" data-theme="c" onclick="chiudi('sen');">Chiudi</a>
+		 						          </div>
+		 						          <div id="titoloSen" style="text-align:center;color:red;size:12px;font-weight:bold;width:80%;float:left;">
+		 						              Senato
+		 						          </div>
+		 						      </div>
+										  <div id="S1" class="contentFiltro" style="height:190px">
+
+										  </div>
+										  <div id="S2" class="contentFiltro" style="height:190px;">
+
+										  </div>
+								</div>
+			</div>
+
+
+         <!-- end my content-->
+
+        </div>
+
+
+		<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+
+		
+
+					<!-- panel content goes here -->
+			</div><!-- /panel -->
+
+    </div>
+
+
+
+    <!-- /page -->
+
+<script>
+   jQuery('.ui-content').css('height',(jQuery('.ui-page').height() -  jQuery('.ui-header').height()) + 'px');
+ 
+</script>
+
+</body>
+</html>
